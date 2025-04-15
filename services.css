@@ -1,0 +1,196 @@
+/* Main Layout */
+body.auth-page {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e4976 0%, #0a2647 100%);
+    font-family: Arial, sans-serif;
+    padding: 40px 20px;
+}
+
+.home-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    transition: transform 0.3s;
+}
+
+.home-link:hover {
+    transform: translateX(-5px);
+}
+
+.services-container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+}
+
+.services-icon {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.services-icon i {
+    font-size: 48px;
+    color: #1e4976;
+}
+
+.services-title {
+    text-align: center;
+    color: #1e4976;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.services-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.services-content {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 20px;
+}
+
+.services-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.services-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.services-section h3 {
+    color: #1e4976;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.services-section h3 i {
+    color: #1e4976;
+    transition: transform 0.3s ease;
+}
+
+.services-section:hover h3 i {
+    transform: rotate(10deg);
+}
+
+.services-section p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.services-section ul {
+    list-style: none;
+    padding-left: 25px;
+}
+
+.services-section ul li {
+    color: #666;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.services-section ul li:before {
+    content: "•";
+    color: #1e4976;
+    position: absolute;
+    left: -20px;
+}
+
+.services-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.auth-btn {
+    background: #1e4976;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-btn:hover {
+    background: #0a2647;
+    transform: translateY(-2px);
+}
+
+/* Scrollbar Styling */
+.services-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.services-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.services-content::-webkit-scrollbar-thumb {
+    background: #1e4976;
+    border-radius: 4px;
+}
+
+.services-content::-webkit-scrollbar-thumb:hover {
+    background: #0a2647;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-container {
+        padding: 30px 20px;
+        margin: 60px 15px;
+    }
+
+    .services-content {
+        max-height: 70vh;
+    }
+
+    .services-section h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-content {
+        padding-right: 10px;
+    }
+
+    .services-section {
+        padding: 15px;
+    }
+
+    .services-section ul li {
+        font-size: 14px;
+    }
+}

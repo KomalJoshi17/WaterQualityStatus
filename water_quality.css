@@ -1,0 +1,636 @@
+:root {
+    --primary-color: #1e4976;
+    --secondary-color: #ffffff;
+    --accent-color: #e3f2fd;
+    --text-color: #333333;
+    --spacing-unit: 20px;
+}
+
+.brand-text{
+    color:white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    padding: 15px var(--spacing-unit);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* Add these properties for sticky header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Add padding to body to prevent content from hiding behind fixed navbar */
+body {
+    background-color: #f5f5f5;
+    padding-top: 70px; /* Adjust this value based on your navbar height */
+}
+
+.nav-brand .brand-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--spacing-unit);
+}
+
+.nav-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: rgba(255,255,255,0.2);
+    transform: scale(1.1);
+    font-size: 17px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.nav-auth a {
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-auth a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.login-btn:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.signup-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-brand .brand-text {
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-brand:hover .brand-text {
+    transform: scale(1.1);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.nav-auth {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-auth a {
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.login-btn {
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.signup-btn {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.main-content {
+    padding: var(--spacing-unit);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 60px 0;
+    background-color: var(--accent-color);
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-unit);
+    padding: var(--spacing-unit) 0;
+}
+
+.feature-card {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #666;
+}
+
+.footer {
+    background: linear-gradient(135deg, #1e4976 0%, #0a2647 100%);
+    color: var(--secondary-color);
+    padding: 40px 0 20px;
+    margin-top: 40px;
+    position: relative;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 0 40px;
+}
+
+.footer-section h3 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 22px;  /* Increased font size */
+    font-weight: 600;
+    letter-spacing: 0.5px;  /* Added letter spacing for better readability */
+}
+
+/* Update border radius for footer sections */
+.footer-section a, 
+.language-select,
+.app-btn {
+    border-radius: 4px;  /* Reduced border radius */
+}
+
+/* Mobile App buttons styling */
+.app-buttons {
+    display: flex;
+    flex-direction: row;  /* Keep buttons in single line */
+    justify-content: space-between;  /* Space between buttons */
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;  /* Take full width */
+}
+
+.app-btn {
+    flex: 1;  /* Make buttons take equal space */
+    justify-content: center;  /* Center content */
+    white-space: nowrap;  /* Prevent text wrapping */
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.social-links a {
+    background: rgba(255, 255, 255, 0.1);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    
+}
+
+.social-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.social-links a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 100%;
+    padding-left:10px;
+}  
+
+/* Language Select Styling */
+.language-select {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--secondary-color);
+    padding: 12px 15px;
+    border-radius: 6px;  /* Reduced from 8px */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+/* Mobile App Section - matching the same border radius */
+.app-btn {
+    border-radius: 6px;  /* Reduced to match language select */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    width: 100%;
+}
+
+.app-btn i {
+    font-size: 18px;
+}
+
+/* Common hover effects */
+.language-select:hover,
+.app-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.app-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Add responsive handling for smaller screens */
+@media (max-width: 480px) {
+    .app-buttons {
+        flex-direction: column;
+    }
+}
+.app-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.footer-section a, 
+.footer-section p {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.footer-section a:hover {
+    color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+.footer-section i {
+    margin-right: 12px;
+    width: 16px;
+    transition: transform 0.3s ease;
+}
+
+.footer-section a:hover i {
+    transform: scale(1.2);
+}
+
+.language-select {
+    padding: 10px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--secondary-color);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 150px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-select:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color:black;
+}
+
+.app-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.app-btn {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.app-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding: 20px 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-links a i {
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Video Section */
+.video-section {
+    position: relative;
+    width: 100%;
+    margin: 40px 0;
+    overflow: hidden;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Changed to 4 columns */
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 1200px) {
+    .video-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.video-container:hover {
+    transform: translateY(-5px);
+}
+
+.video-container video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .video-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Add pause state by default */
+.video-container video:not(:hover) {
+    filter: brightness(0.9);
+}
+
+/* Smooth transition for hover effects */
+.video-container video {
+    transition: all 0.3s ease;
+}
+
+.video-container video:hover {
+    opacity: 1;
+    filter: brightness(1);
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    background: #0a2647;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .video-overlay h2 {
+        font-size: 1.8em;
+    }
+
+    .video-overlay p {
+        font-size: 1em;
+    }
+}
+
+/* User dropdown styles */
+.user-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: var(--secondary-color);
+    padding: 8px 20px;
+    font-size: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.dropbtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    background-color: rgba(255,255,255,0.1);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    z-index: 1000;
+    top: 100%;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: var(--primary-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Add this new style for the logout button */
+.logout-btn {
+    color: var(--primary-color);
+    background-color: var(--secondary-color) !important;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logout-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    background-color: #f0f0f0;
+}

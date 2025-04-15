@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - Water Quality Analysis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="terms.css">
+</head>
+<body class="auth-page">
+    <a href="signup.html" class="home-link">
+        <i class="fas fa-arrow-left"></i>
+        Back to Sign Up
+    </a>
+
+    <div class="terms-container">
+        <div class="terms-icon">
+            <i class="fas fa-file-contract"></i>
+        </div>
+
+        <h2 class="terms-title">Terms & Conditions</h2>
+        <p class="terms-subtitle">Please read these terms carefully before using our services.</p>
+
+        <div class="terms-content">
+            <section class="terms-section">
+                <h3><i class="fas fa-check-circle"></i> Acceptance of Terms</h3>
+                <p>By accessing and using WaterQual's services, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not access our service.</p>
+            </section>
+
+            <section class="terms-section">
+                <h3><i class="fas fa-globe"></i> Service Description</h3>
+                <p>WaterQual provides environmental monitoring services, including:</p>
+                <ul>
+                    <li>Water quality analysis and monitoring</li>
+                    <li>Air quality data collection</li>
+                    <li>Soil quality assessment</li>
+                    <li>Radiation level monitoring</li>
+                    <li>Environmental data visualization</li>
+                </ul>
+            </section>
+
+            <section class="terms-section">
+                <h3><i class="fas fa-user-shield"></i> User Responsibilities</h3>
+                <p>Users of our service agree to:</p>
+                <ul>
+                    <li>Provide accurate and complete information</li>
+                    <li>Maintain the security of their account</li>
+                    <li>Use the service in compliance with applicable laws</li>
+                    <li>Not misuse or manipulate the data</li>
+                    <li>Report any security vulnerabilities</li>
+                </ul>
+            </section>
+
+            <section class="terms-section">
+                <h3><i class="fas fa-database"></i> Data Usage</h3>
+                <p>By using our service, you acknowledge that:</p>
+                <ul>
+                    <li>Data collected is used for environmental monitoring</li>
+                    <li>Aggregated data may be used for research</li>
+                    <li>Personal data is protected as per our Privacy Policy</li>
+                    <li>Data sharing follows regulatory requirements</li>
+                </ul>
+            </section>
+
+            <section class="terms-section">
+                <h3><i class="fas fa-server"></i> Service Availability</h3>
+                <p>WaterQual strives to provide uninterrupted service but:</p>
+                <ul>
+                    <li>May undergo maintenance periods</li>
+                    <li>Cannot guarantee 100% uptime</li>
+                    <li>Reserves the right to modify services</li>
+                    <li>Will notify users of significant changes</li>
+                </ul>
+            </section>
+
+            <section class="terms-section">
+                <h3><i class="fas fa-copyright"></i> Intellectual Property</h3>
+                <p>All content and materials available on WaterQual are protected by:</p>
+                <ul>
+                    <li>Copyright laws</li>
+                    <li>Trademark rights</li>
+                    <li>Other proprietary rights</li>
+                </ul>
+            </section>
+
+            <section class="terms-section">
+                <h3><i class="fas fa-exclamation-triangle"></i> Disclaimer</h3>
+                <p>WaterQual provides environmental monitoring services for informational purposes only. We do not guarantee complete accuracy, and decisions made based on our data are at the user's discretion. We are not responsible for any damages resulting from reliance on our services.</p>
+            </section>
+
+            <section class="terms-section">
+                <h3><i class="fas fa-envelope"></i> Contact Information</h3>
+                <p>For questions about these Terms, contact us at:</p>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> Email: <a href="mailto:legal@waterqual.com">legal@waterqual.com</a></li>
+                    <li><i class="fas fa-phone"></i> Phone: +91 123-456-7890</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Location: New Delhi, India</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- User Agreement Checkbox -->
+        <div class="terms-checkbox">
+            <input type="checkbox" id="agree" required>
+            <label for="agree">I have read and agree to the Terms & Conditions</label>
+        </div>
+
+        <div class="terms-actions">
+            <!-- Button Disabled Until Checkbox is Checked -->
+            <button id="acceptBtn" class="auth-btn" disabled>
+                <i class="fas fa-check"></i> Accept & Continue
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Enable the button only if the checkbox is checked
+        document.getElementById('agree').addEventListener('change', function() {
+            document.getElementById('acceptBtn').disabled = !this.checked;
+        });
+
+        // Redirect to signup page upon acceptance
+        document.getElementById('acceptBtn').addEventListener('click', function() {
+            window.location.href = 'signup.html';
+        });
+    </script>
+
+</body>
+</html>

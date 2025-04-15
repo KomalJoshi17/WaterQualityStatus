@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Analysis Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="help.css">
+    <link rel="stylesheet" href="water_quality.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="auth-page">
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="water_quality.html" class="brand-text">WaterQual</a>
+        </div>
+        <div class="nav-links">
+            <a href="water_quality.html"><i class="fas fa-home"></i> Home</a>
+            <a href="information.html"><i class="fas fa-info-circle"></i> Information</a>
+            <a href="help.html"><i class="fas fa-question-circle"></i> Help Center</a>
+            <a href="ebooks.html"><i class="fas fa-book"></i> E-Books</a>
+            <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+        </div>
+        <div class="nav-auth">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="signup.html" class="signup-btn">Sign In</a>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <div class="form-icon">
+            <i class="fas fa-leaf"></i>
+        </div>
+        <h2>Environmental Analysis Form</h2>
+        <p class="form-subtitle">Submit your environmental parameters for detailed analysis</p>
+
+        <!-- Update the form tag to include action and method -->
+        <form id="environmentalForm" method="POST" action="analysis_results.php">
+            <!-- Location Details -->
+            <div class="form-section">
+                <h3><i class="fas fa-map-marker-alt"></i> Location Details</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Area/Location</label>
+                        <input type="text" name="location" required>
+                    </div>
+                    <div class="form-group">
+                        <label>State</label>
+                        <select name="state" required>
+                            <option value="">Select State</option>
+                            <option value="andhra_pradesh">Andhra Pradesh</option>
+                            <option value="arunachal_pradesh">Arunachal Pradesh</option>
+                            <option value="assam">Assam</option>
+                            <option value="bihar">Bihar</option>
+                            <option value="chhattisgarh">Chhattisgarh</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="goa">Goa</option>
+                            <option value="gujarat">Gujarat</option>
+                            <option value="haryana">Haryana</option>
+                            <option value="himachal_pradesh">Himachal Pradesh</option>
+                            <option value="jammu_kashmir">Jammu and Kashmir</option>
+                            <option value="jharkhand">Jharkhand</option>
+                            <option value="karnataka">Karnataka</option>
+                            <option value="kerala">Kerala</option>
+                            <option value="madhya_pradesh">Madhya Pradesh</option>
+                            <option value="maharashtra">Maharashtra</option>
+                            <option value="manipur">Manipur</option>
+                            <option value="meghalaya">Meghalaya</option>
+                            <option value="mizoram">Mizoram</option>
+                            <option value="nagaland">Nagaland</option>
+                            <option value="odisha">Odisha</option>
+                            <option value="punjab">Punjab</option>
+                            <option value="rajasthan">Rajasthan</option>
+                            <option value="sikkim">Sikkim</option>
+                            <option value="tamil_nadu">Tamil Nadu</option>
+                            <option value="telangana">Telangana</option>
+                            <option value="tripura">Tripura</option>
+                            <option value="uttar_pradesh">Uttar Pradesh</option>
+                            <option value="uttarakhand">Uttarakhand</option>
+                            <option value="west_bengal">West Bengal</option>
+                            <!-- Union Territories
+                            <option value="andaman_nicobar">Andaman and Nicobar Islands</option>
+                            <option value="chandigarh">Chandigarh</option>
+                            <option value="dadra_nagar_haveli">Dadra and Nagar Haveli</option>
+                            <option value="daman_diu">Daman and Diu</option>
+                            <option value="lakshadweep">Lakshadweep</option>
+                            <option value="puducherry">Puducherry</option>
+                            <option value="ladakh">Ladakh</option> -->
+                            <!-- Add more states -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Water Quality Parameters -->
+            <div class="form-section">
+                <h3><i class="fas fa-tint"></i> Water Quality Parameters</h3>
+                <div class="standards-box">
+                    <h4>National Standards</h4>
+                    <ul>
+                        <li>pH Level: 6.5-8.5</li>
+                        <li>Dissolved Oxygen: ≥ 5 mg/L</li>
+                        <li>Turbidity: < 5 NTU</li>
+                    </ul>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>pH Level (6.5-8.5)</label>
+                        <input type="number" name="ph_level" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Dissolved Oxygen (mg/L)</label>
+                        <input type="number" name="dissolved_oxygen" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Turbidity (NTU)</label>
+                        <input type="number" name="turbidity" step="0.1" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Air Quality Parameters -->
+            <div class="form-section">
+                <h3><i class="fas fa-wind"></i> Air Quality Parameters</h3>
+                <div class="standards-box">
+                    <h4>National Standards</h4>
+                    <ul>
+                        <li>PM2.5: < 50 μg/m³</li>
+                        <li>PM10: < 100 μg/m³</li>
+                        <li>AQI: 0-50 (Good)</li>
+                    </ul>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>PM2.5 (μg/m³)</label>
+                        <input type="number" name="pm25" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>PM10 (μg/m³)</label>
+                        <input type="number" name="pm10" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>AQI</label>
+                        <input type="number" name="aqi" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soil Parameters -->
+            <div class="form-section">
+                <h3><i class="fas fa-mountain"></i> Soil Parameters</h3>
+                <div class="standards-box">
+                    <h4>Recommended Levels</h4>
+                    <ul>
+                        <li>Soil pH: 6.0-7.5</li>
+                        <li>Organic Matter: > 3%</li>
+                        <li>Nitrogen Content: 0.15-0.4%</li>
+                    </ul>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Soil pH (6.0-7.5)</label>
+                        <input type="number" name="soil_ph" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Organic Matter (%)</label>
+                        <input type="number" name="organic_matter" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nitrogen Content (%)</label>
+                        <input type="number" name="nitrogen_content" step="0.01" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Radiation Parameters -->
+            <div class="form-section">
+                <h3><i class="fas fa-radiation"></i> Radiation Parameters</h3>
+                <div class="standards-box">
+                    <h4>Safety Limits</h4>
+                    <ul>
+                        <li>Gamma Radiation: < 1 mSv/year</li>
+                        <li>EMF Strength: < 100 μT</li>
+                        <li>Radon Level: < 100 Bq/m³</li>
+                    </ul>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Gamma Radiation (mSv/year)</label>
+                        <input type="number" name="gamma_radiation" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label>EMF Strength (μT)</label>
+                        <input type="number" name="emf_strength" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Radon Level (Bq/m³)</label>
+                        <input type="number" name="radon_level" step="0.1" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Noise Quality Parameters -->
+            <div class="form-section">
+                <h3><i class="fas fa-volume-up"></i> Noise Quality Parameters</h3>
+                <div class="standards-box">
+                    <h4>Safety Standards</h4>
+                    <ul>
+                        <li>Day Noise Level: ≤ 55 dB</li>
+                        <li>Night Noise Level: ≤ 45 dB</li>
+                        <li>Industrial Noise: ≤ 75 dB</li>
+                    </ul>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Day Noise Level (dB)</label>
+                        <input type="number" name="day_noise" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Night Noise Level (dB)</label>
+                        <input type="number" name="night_noise" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Industrial Noise (dB)</label>
+                        <input type="number" name="industrial_noise" step="0.1" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Environmental Statistics section follows ... -->
+            <div class="form-section">
+                <h3><i class="fas fa-chart-line"></i> Environmental Statistics</h3>
+                <div class="standards-box">
+                    <h4>Measurement Scales</h4>
+                    <ul>
+                        <li>Floral Diversity: 1-5 (Species richness index)</li>
+                        <li>Faunal Density: 50-100 (Population per km²)</li>
+                        <li>Wetland Health: 0-100 (Health index)</li>
+                    </ul>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Floral Diversity (1-5)</label>
+                        <input type="number" name="floral_diversity" step="0.1" min="1" max="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Faunal Density (per km²)</label>
+                        <input type="number" name="faunal_density" step="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Wetland Health (0-100)</label>
+                        <input type="number" name="wetland_health" step="1" min="0" max="100" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Submit Analysis
+                </button>
+                <button type="reset" class="reset-btn">
+                    <i class="fas fa-undo"></i> Reset Form
+                </button>
+            </div>
+        </form>
+    </div>
+    <!-- Add this before closing body tag if not present -->
+    <script src="help.js"></script>
+</body>
+</html>

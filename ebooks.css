@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #1e4976;
+    --secondary-color: #ffffff;
+    --accent-color: #e3f2fd;
+    --text-color: #333333;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Update the body padding to account for fixed header */
+body {
+    background-color: #f5f5f5;
+    padding-top: 70px; /* Same as water_quality.css */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Update the header margin and padding */
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 40px;  /* Add top margin */
+    padding: 30px 0;   /* Add padding */
+    background-color: var(--accent-color);
+    border-radius: 8px;
+}
+
+/* Update container padding */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;  /* Increased padding */
+}
+
+.header h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #666;
+    font-size: 1.1em;
+}
+
+.ebooks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Increased from 300px */
+    gap: 35px; /* Increased from 30px */
+    padding: 20px 0;
+}
+
+.ebook-card {
+    background: var(--secondary-color);
+    border-radius: 12px; /* Increased from 10px */
+    padding: 30px; /* Increased from 20px */
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.ebook-card:hover {
+    transform: translateY(-5px);
+}
+
+.ebook-card img {
+    width: 300px; /* Increased from 250px */
+    height: 400px; /* Increased from 250px for better book cover display */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ebook-card h3 {
+    color: var(--primary-color);
+    font-size: 1.4em; /* Increased from 1.3em */
+    margin-bottom: 12px; /* Increased from 10px */
+}
+
+.ebook-card p {
+    color: #666;
+    margin-bottom: 25px; /* Increased from 20px */
+    font-size: 1em; /* Increased from 0.95em */
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #163a5f;
+    transform: translateY(-2px);
+}
+
+.download-btn i {
+    font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+    .ebooks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .ebooks-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header h1 {
+        font-size: 2em;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}

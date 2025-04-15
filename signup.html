@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Water Quality Analysis</title>
+    <!-- External CSS and Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="signup.css">
+    <!-- Add this in the head section -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+</head>
+<body class="auth-page">
+    <a href="water_quality.html" class="home-link">
+        <i class="fas fa-home"></i>
+        Back to Home
+    </a>
+
+    <div class="auth-container">
+        <div class="user-icon">
+            <i class="fas fa-user-plus"></i>
+        </div>
+        
+        <h2 class="auth-title">Create Account</h2>
+        <p class="auth-subtitle">Join our community today</p>
+
+        <form id="signupForm" action="signup.php" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" class="form-input" name="firstName" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" class="form-input" name="lastName" placeholder="Last Name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <i class="fas fa-envelope input-icon"></i>
+                <input type="email" class="form-input" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="form-group">
+                <i class="fas fa-phone input-icon"></i>
+                <input type="tel" class="form-input" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" required>
+            </div>
+
+            <div class="form-group">
+                <i class="fas fa-lock input-icon"></i>
+                <input type="password" class="form-input" name="password" id="password" placeholder="Password" required>
+                <div class="password-requirements">
+                    <ul>
+                        <li><i class="fas fa-check"></i> At least 8 characters</li>
+                        <li><i class="fas fa-check"></i> Include numbers and symbols</li>
+                        <li><i class="fas fa-check"></i> Mix of uppercase and lowercase letters</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="captcha-wrapper">
+                <div class="captcha-box" id="captcha"></div>
+                <button type="button" class="refresh-captcha">
+                    <i class="fas fa-sync-alt"></i> Refresh Captcha
+                </button>
+                <div class="form-group">
+                    <i class="fas fa-shield-alt input-icon"></i>
+                    <input type="text" class="form-input" name="captcha" placeholder="Enter Captcha" required>
+                </div>
+            </div>
+
+            <div class="terms-checkbox">
+                <label>
+                    <input type="checkbox" name="terms" id="terms" required>
+                    I agree to the <a href="terms.html" class="terms-link">Terms and Conditions</a>
+                </label>
+            </div>
+
+            <button type="submit" class="auth-btn">
+                <i class="fas fa-user-plus"></i> Sign Up
+            </button>
+
+            <div class="auth-links">
+                <p>Already have an account? <a href="login.html" class="page-link">Login</a></p>
+            </div>
+        </form>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="signup.js"></script>
+</body>
+</html>

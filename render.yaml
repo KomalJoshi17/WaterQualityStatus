@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: water-quality-status
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile

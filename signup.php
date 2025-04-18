@@ -1,9 +1,4 @@
 <?php
-header('Content-Type: application/json');
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-$response = ['success' => false, 'message' => ''];
 
 // Database connection
 $con = mysqli_connect('localhost', 'root', '', 'project');

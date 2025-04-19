@@ -7,16 +7,16 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    margin-top: 70px;
+    /* margin-top: 70px; */
 }
 
 /* Update the header styling */
 .info-header {
-    background: #f0f7ff;  /* Light blue background */
+    background: var(--accent-color);  /* Light blue background */
     text-align: center;
     padding: 40px 20px;
     border-radius: 8px;
-    margin: 40px 0 30px;
+    /* margin: 40px 0 30px; */
 }
 
 .info-header h1 {

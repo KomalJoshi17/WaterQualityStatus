@@ -16,7 +16,7 @@
 /* Update the body padding to account for fixed header */
 body {
     background-color: #f5f5f5;
-    padding-top: 70px; /* Same as water_quality.css */
+    /* padding-top: 70px;  */
 }
 
 .container {

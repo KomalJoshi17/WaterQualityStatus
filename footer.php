@@ -2,7 +2,7 @@
     <div class="footer-content">
         <div class="footer-section">
             <h3>Quick Links</h3>
-            <a href="index.php"><i class="fas fa-home"></i> Home</a>
+            <a href="water_quality.php"><i class="fas fa-home"></i> Home</a>
             <a href="information.php"><i class="fas fa-info-circle"></i> Information</a>
             <a href="help.php"><i class="fas fa-question-circle"></i> Help Center</a>
             <a href="ebooks.php"><i class="fas fa-book"></i> E-Books</a>
@@ -58,9 +58,9 @@
     <div class="footer-bottom">
         <p class="copyright">All rights reserved</p>
         <div class="footer-links">
-            <a href="privacy.php"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
-            <a href="services.php"><i class="fas fa-file-contract"></i> Terms of Service</a>
-            <a href="sitemap.php"><i class="fas fa-sitemap"></i> Sitemap</a>
+            <a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+            <a href="services.html"><i class="fas fa-file-contract"></i> Terms of Service</a>
+            <a href="sitemap.html"><i class="fas fa-sitemap"></i> Sitemap</a>
         </div>
     </div>
 </footer>

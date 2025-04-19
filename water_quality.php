@@ -49,7 +49,7 @@ session_start();
             <div class="hero-content">
                 <h1>Real-Time Water Insights for a Healthier Tomorrow</h1>
                 <p>Monitoring and analyzing water quality for sustainable development</p>
-                <a href="information.html" class="cta-button">Explore Data <i class="fas fa-arrow-right"></i></a>
+                <a href="information.php" class="cta-button">Explore Data <i class="fas fa-arrow-right"></i></a>
             </div>
         </section>
 
@@ -215,7 +215,7 @@ session_start();
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <!-- <div class="video-container">
+                <div class="video-container">
                     <video muted loop preload="metadata" style="height: 250px;">
                         <source src="videos/13.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -262,7 +262,7 @@ session_start();
                         <source src="videos/20.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                </div> -->
+                </div>
             </div>
         </section>
     </main>
@@ -271,22 +271,22 @@ session_start();
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Quick Links</h3>
-                <a href="water_quality.html"><i class="fas fa-home"></i> Home</a>
-                <a href="information.html"><i class="fas fa-info-circle"></i> Information</a>
-                <a href="help.html"><i class="fas fa-question-circle"></i> Help Center</a>
-                <a href="ebooks.html"><i class="fas fa-book"></i> E-Books</a>
-                <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+                <a href="water_quality.php"><i class="fas fa-home"></i> Home</a>
+                <a href="information.php"><i class="fas fa-info-circle"></i> Information</a>
+                <a href="help.php"><i class="fas fa-question-circle"></i> Help Center</a>
+                <a href="ebooks.php"><i class="fas fa-book"></i> E-Books</a>
+                <a href="blog.php"><i class="fas fa-blog"></i> Blog</a>
             </div>
 
             <div class="footer-section">
                 <h3>Resources</h3>
-                <a href="information.html#water-quality"><i class="fas fa-tint"></i> Water Quality Data</a>
-                <a href="information.html#air-quality"><i class="fas fa-chart-bar"></i> Air Quality Data</a>
-                <a href="information.html#soil-quality"><i class="fas fa-flask"></i> Soil Analysis</a>
-                <a href="information.html#radiation-quality"><i class="fas fa-radiation"></i> Radiation Data</a>
-                <a href="information.html#environmental-status"><i class="fas fa-leaf"></i> Environmental Status</a>
-                <a href="information.html#noise-quality"><i class="fas fa-volume-up"></i> Noise Pollution</a>
-                <a href="information.html#lakes-analysis"><i class="fas fa-water"></i> 20 Main River Water Quality</a>
+                <a href="information.php#water-quality"><i class="fas fa-tint"></i> Water Quality Data</a>
+                <a href="information.php#air-quality"><i class="fas fa-chart-bar"></i> Air Quality Data</a>
+                <a href="information.php#soil-quality"><i class="fas fa-flask"></i> Soil Analysis</a>
+                <a href="information.php#radiation-quality"><i class="fas fa-radiation"></i> Radiation Data</a>
+                <a href="information.php#environmental-status"><i class="fas fa-leaf"></i> Environmental Status</a>
+                <a href="information.php#noise-quality"><i class="fas fa-volume-up"></i> Noise Pollution</a>
+                <a href="information.php#lakes-analysis"><i class="fas fa-water"></i> 20 Main River Water Quality</a>
             </div>
 
             <div class="footer-section">

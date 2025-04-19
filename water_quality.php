@@ -17,10 +17,10 @@ session_start();
         </div>
         <div class="nav-links">
             <a href="water_quality.php"><i class="fas fa-home"></i> Home</a>
-            <a href="information.html"><i class="fas fa-info-circle"></i> Information</a>
-            <a href="help.html"><i class="fas fa-question-circle"></i> Help Center</a>
-            <a href="ebooks.html"><i class="fas fa-book"></i> E-Books</a>
-            <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+            <a href="information.php"><i class="fas fa-info-circle"></i> Information</a>
+            <a href="help.php"><i class="fas fa-question-circle"></i> Help Center</a>
+            <a href="ebooks.php"><i class="fas fa-book"></i> E-Books</a>
+            <a href="blog.php"><i class="fas fa-blog"></i> Blog</a>
         </div>
         <div class="nav-auth">
             <?php if(isset($_SESSION['user_name'])): ?>
@@ -28,9 +28,9 @@ session_start();
                     <button class="dropbtn">
                         <i class="fas fa-user"></i> <?php echo htmlspecialchars($_SESSION['user_name']); ?>
                     </button>
-                    <a href="logout.php" class="logout-btn">
-                        <i class="fas fa-sign-out-alt"></i> Logout
-                    </a>
+                    <div class="dropdown-content">
+                        <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
                 </div>
             <?php else: ?>
                 <a href="login.html" class="login-btn">Login</a>
@@ -38,16 +38,110 @@ session_start();
             <?php endif; ?>
         </div>
     </nav>
-
+    
     <main class="main-content">
+        <!-- Hero Section with Video Background -->
+        <section class="hero-banner">
+            <video autoplay muted loop playsinline>
+                <source src="videos/18.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-content">
+                <h1>Real-Time Water Insights for a Healthier Tomorrow</h1>
+                <p>Monitoring and analyzing water quality for sustainable development</p>
+                <a href="information.html" class="cta-button">Explore Data <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="info-section">
+            <h2 class="section-title">Key Features of Our Water Quality Platform</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Water Analysis</h3>
+                    <p>Comprehensive water quality testing and analysis</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Real-time Monitoring</h3>
+                    <p>Monitor water parameters in real-time</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Detailed Reports</h3>
+                    <p>Generate detailed water quality reports</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Management</h3>
+                    <p>Efficient water quality data management</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Clean Water Matters Section -->
+        <section class="info-section">
+            <h2 class="section-title">🌍 Why Clean Water Matters</h2>
+            <div class="info-content">
+                <p>Access to clean and safe water is not just a basic human need — it's essential for survival, health, and environmental balance.</p>
+                <p>Contaminated water causes life-threatening diseases and long-term health impacts.</p>
+                <p>Clean water is necessary for agriculture, sanitation, and overall development.</p>
+                <p>Monitoring water quality ensures the well-being of people, animals, and ecosystems.</p>
+            </div>
+        </section>
+
+        <!-- Water Facts Section -->
+        <section class="info-section">
+            <h2 class="section-title">📊 Water Facts That Might Surprise You</h2>
+            <div class="info-content">
+                <p>🌎 Only 0.3% of the Earth's water is usable by humans.</p>
+                <p>🛢️ Just 1 drop of oil can contaminate 25 liters of clean water.</p>
+                <p>🚱 Over 2 billion people globally lack access to safe drinking water.</p>
+                <p>💧 The average person uses 80-100 gallons of water daily.</p>
+                <p>🌧️ Rainwater harvesting is one of the oldest methods of sustainable water use.</p>
+            </div>
+        </section>
+
+        <!-- Quotes Section -->
+        <section class="info-section">
+            <h2 class="section-title">💬 Quotes That Make You Think</h2>
+            <div class="quotes-container">
+                <blockquote>
+                    "Thousands have lived without love, not one without water."
+                    <cite>— W.H. Auden</cite>
+                </blockquote>
+                <blockquote>
+                    "Water is the driving force of all nature."
+                    <cite>— Leonardo da Vinci</cite>
+                </blockquote>
+                <blockquote>
+                    "Clean water, the essence of life and a birthright for everyone."
+                    <cite>— Anonymous</cite>
+                </blockquote>
+                <blockquote>
+                    "When the well's dry, we know the worth of water."
+                    <cite>Benjamin Franklin</cite>
+                </blockquote>
+                <blockquote>
+                    "No water, no life. No blue, no green."
+                    <cite>Sylvia Earle</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Video Section -->
         <section class="hero-section">
             <h1>Welcome to Water Gallary</h1>
             <p>A Visual Insight into Global Water Bodies</p>
         </section>
-
-        <!-- Video Section -->
+        
         <section class="video-section">
             <div class="video-grid">
+                <!-- Video content here -->
                 <div class="video-container">
                     <video muted loop preload="metadata" style="height: 250px;">
                         <source src="videos/1.mp4" type="video/mp4">
@@ -121,7 +215,7 @@ session_start();
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div class="video-container">
+                <!-- <div class="video-container">
                     <video muted loop preload="metadata" style="height: 250px;">
                         <source src="videos/13.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -168,30 +262,7 @@ session_start();
                         <source src="videos/20.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                </div>
-            </div>
-        </section>
-
-        <section class="features-grid">
-            <div class="feature-card">
-                <i class="fas fa-tint"></i>
-                <h3>Water Analysis</h3>
-                <p>Comprehensive water quality testing and analysis</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Real-time Monitoring</h3>
-                <p>Monitor water parameters in real-time</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-file-alt"></i>
-                <h3>Detailed Reports</h3>
-                <p>Generate detailed water quality reports</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-database"></i>
-                <h3>Data Management</h3>
-                <p>Efficient water quality data management</p>
+                </div> -->
             </div>
         </section>
     </main>

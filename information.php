@@ -307,7 +307,7 @@
                   <p class="text-gray-600">${lake.location}</p>
                   <p class="text-gray-800 font-semibold">Water Quality: ${lake.waterQuality}</p>
                   <p class="text-gray-800 font-semibold">pH Value: ${lake.ph}</p>
-                  <a href="${lake.link}" target="_blank" class="text-[#f4a261] text-base flex items-center justify-center gap-1 mt-2">
+                  <a href="${lake.link}" class="text-[#f4a261] text-base flex items-center justify-center gap-1 mt-2">
                     <span class="underline">Read More</span> <i class="fas fa-arrow-right text-xs"></i>
                   </a>
                 </div>

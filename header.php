@@ -13,7 +13,7 @@ session_start();
 <body>
     <nav class="navbar">
         <div class="nav-brand">
-            <a href="water_quality.php" class="brand-text">WaterQual</a>
+            <a href="water_quality.php" class="brand-text underline">WaterQual</a>
         </div>
         <div class="nav-links">
             <a href="water_quality.php"><i class="fas fa-home"></i> Home</a>

@@ -174,7 +174,7 @@ session_start();
                 </div>
                 <div class="video-container">
                     <video muted loop preload="metadata" style="height: 250px;">
-                        <source src="videos/6.mp4" type="video/mp4">
+                        <source src="videos/20.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -186,20 +186,20 @@ session_start();
                 </div>
                 <div class="video-container">
                     <video muted loop preload="metadata" style="height: 250px;">
-                        <source src="videos/8.mp4" type="video/mp4">
+                        <source src="videos/19.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 <!-- Adding videos 9-18 -->
                 <div class="video-container">
                     <video muted loop preload="metadata" style="height: 250px;">
-                        <source src="videos/9.mp4" type="video/mp4">
+                        <source src="videos/14.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="video-container">
                     <video muted loop preload="metadata" style="height: 250px;">
-                        <source src="videos/10.mp4" type="video/mp4">
+                        <source src="videos/13.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -212,54 +212,6 @@ session_start();
                 <div class="video-container">
                     <video muted loop preload="metadata" style="height: 250px;">
                         <source src="videos/12.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video muted loop preload="metadata" style="height: 250px;">
-                        <source src="videos/13.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video muted loop preload="metadata" style="height: 250px;">
-                        <source src="videos/14.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video muted loop preload="metadata" style="height: 250px;">
-                        <source src="videos/15.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video muted loop preload="metadata" style="height: 250px;">
-                        <source src="videos/16.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video muted loop preload="metadata" style="height: 250px;">
-                        <source src="videos/17.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video muted loop preload="metadata" style="height: 250px;">
-                        <source src="videos/18.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video muted loop preload="metadata" style="height: 250px;">
-                        <source src="videos/19.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video muted loop preload="metadata" style="height: 250px;">
-                        <source src="videos/20.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -335,6 +287,30 @@ session_start();
     </footer>
 
     <!-- Add this before closing </body> tag -->
+    <div class="chat-icon" id="chatIcon">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <div class="chat-container" id="chatContainer">
+        <!-- Add this button to your chat header -->
+<div class="chat-header">
+    <h3>WaterQual Assistant</h3>
+    <div class="chat-controls">
+        <button id="resetChat" title="Reset Chat"><i class="fas fa-redo"></i></button>
+        <button id="closeChat" title="Close Chat"><i class="fas fa-times"></i></button>
+    </div>
+</div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <p>Hello! I'm your WaterQual assistant. How can I help you with water quality today?</p>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userMessage" placeholder="Type your message here...">
+            <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
     <script src="water_quality.js"></script>
 </body>
 </html>

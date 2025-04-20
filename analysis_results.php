@@ -544,14 +544,14 @@ function getOverallStatus($data) {
             <a href="blog.php"><i class="fas fa-blog"></i> Blog</a>
         </div>
         <div class="nav-auth">
-            <?php if(isset($_SESSION['user_name'])): ?>
+        <?php if(isset($_SESSION['user_name'])): ?>
                 <div class="user-dropdown">
                     <button class="dropbtn">
                         <i class="fas fa-user"></i> <?php echo htmlspecialchars($_SESSION['user_name']); ?>
                     </button>
-                    <a href="logout.php" class="logout-btn">
-                        <i class="fas fa-sign-out-alt"></i> Logout
-                    </a>
+                    <div class="dropdown-content">
+                        <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
                 </div>
             <?php else: ?>
                 <a href="login.html" class="login-btn">Login</a>
@@ -927,13 +927,13 @@ function getOverallStatus($data) {
         
         <!-- Action Buttons -->
         <div class="action-buttons">
-            <a href="help.html" class="action-btn">
+            <a href="help.php" class="action-btn">
                 <i class="fas fa-arrow-left"></i> Back to Form
             </a>
             <a href="#" class="action-btn primary" onclick="window.print()">
                 <i class="fas fa-print"></i> Print Report
             </a>
-            <a href="water_quality.html" class="action-btn">
+            <a href="water_quality.php" class="action-btn">
                 <i class="fas fa-home"></i> Go to Home
             </a>
         </div>
